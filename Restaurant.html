@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurent</title>
+    <script src="https://kit.fontawesome.com/0af10af4ce.js" crossorigin="anonymous"></script>    
+    <style>
+        *{
+            margin: 0;
+        }
+        .main{
+            background-image:  linear-gradient(rgba(23, 21, 48, 0.9),rgba(23, 21, 48, 0.9)),url(bg-hero.jpg);
+            height: 100vh;    
+        }
+        .navbar{
+            display: flex;
+            align-items:center;
+            justify-content: space-between;
+            padding-top: 10px;
+            background-color: rgb(24, 8, 43);
+            position: sticky;
+            top: 0px;
+            z-index: 1;
+        }
+        .Name{
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding-left: 30px;
+            padding-top: 10px;
+        }
+        .navitem{
+            display: flex;
+            gap: 20px;
+            padding-right: 30px;
+            padding-top: 10px;
+            
+        }
+        .navitem p{
+            font-size: 2.5vh;
+            color: white;
+            font-family: poppins;
+            align-content: center;
+            transition: color 600ms;
+        }
+        .btn1{
+            background-color: orange;
+            color: white;
+            font-family: poppins;
+            border: none;
+            border-radius: 2px;
+            padding: 7px 20px 7px 20px;
+        }
+        .navitem p:hover{
+            color: orange;
+            cursor: pointer;
+        }    
+        .pgbtn{
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-family: poppins;
+            font-size: 2.5vh;
+        }
+        .page{
+            position: relative;
+            display: inline-block;
+            align-content: center;
+        }
+        .btn1items{
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            border-radius: 2px;
+            z-index: 1;
+            
+        }
+        .btn1items a{
+            color: rgb(66, 66, 66);
+            padding: 8px 8px;
+            min-width: 100px;
+            text-decoration: none;
+            display: block;    
+        }
+        .btn1items a:hover{
+            background-color: rgb(240, 240, 240);
+        }
+        .page:hover .btn1items{
+            display: block;
+            
+        }
+        .table{
+            padding-left: 40px ;
+            padding-right: 40px ;
+            padding-top: 15px ;
+            padding-bottom: 15px ;
+            background-color: orange;
+            color: white;
+            border: none;
+            border-radius: 2px;
+            margin-top: 20px;
+        }
+        .pie{
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between;
+        }
+        .content{
+            padding-left: 60px;
+            padding-top: 80px;
+        }
+        .content{
+            position: relative;
+            animation-name: move;
+            animation-duration: 3s;
+
+        }
+        @keyframes move{
+            0%{left: -400px;top: 0px;}
+            100%{left: 0px; top: 0px; }
+        }
+        .content p{
+            margin-top: 20px;
+        }
+        .image{
+            padding-right: 60px;
+            padding-top: 50px;            
+        }
+        img{
+            animation-name: rotate;
+            animation-duration: 80s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        @keyframes rotate{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="Name">
+            <i class="fa-sharp fa-solid fa-utensils" style="color: orange; font-size: 7vh;"></i>
+            <p style="color: orange; font-size: 6vh; font: bold;font-family: poppins;">Restoran</p>
+        </div>
+        <div class="navitem">
+            <p style="color: orange;">HOME</p>
+            <p>ABOUT</p>
+            <p>SERVICE</p>
+            <p>MENU</p>
+            <div class="page">
+                <button class="pgbtn">PAGES
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                        <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                      </svg>
+                </button>
+                <div class="btn1items">
+                    <a href="#">Booking</a>
+                    <a href="#">Our team</a>
+                    <a href="#">Testimonial</a>
+                </div>
+            </div>
+            <p>CONTACT</p>
+            <button class="btn1">BOOK A TABLE</button>
+            
+        </div>
+    </div>
+    <div class="main">       
+        <div class="pie">
+            <div class="content">
+                <h1 style="font-family: poppins;font-size: 9vh;color: white;">Enjoy Our <br> Delicious Meal</h1>
+                <p style="color: white;">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Eveniet tempore provident dolorem sunt deserunt natus culpa magnam <br> accusantium quae iure reprehenderit, enim dolor nisi maxime possimus</p>
+                <button class="table">BOOK A TABLE</button>
+            </div>
+            <div class="image">
+                <img src="images/hero.png" alt="" width="400px" height="400px">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

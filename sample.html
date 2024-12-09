@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main1{
+            height: 200px;
+            width: 200px;
+            background-color: aqua;
+        }
+
+        .main2{
+            height: 200px;
+            width: 200px;
+            background-color: red;
+        }
+
+        .main{
+            display: flex;
+        }
+
+        @media screen and (min-width:500px) {
+            .main{
+                flex-direction: column;
+            }
+            .main2{
+                background-color: black;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="main1"></div>
+        <div class="main2"></div>
+    </div>
+</body>
+</html>
